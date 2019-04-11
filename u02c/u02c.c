@@ -29,11 +29,11 @@ int main() {
 
     // Zähler erhöhen:
     gesamt++;
-    if (c >= 'A' && c <= 'Z') // Das eingelesene Zeichen ist ein Großbuchstabe
+    if (c >= 'A' && c <= 'Z') { // Das eingelesene Zeichen ist ein Großbuchstabe
       gross++;
-    else if (c >= 'a' && c <= 'z') // Das eingelesene Zeichen ist ein Kleinbuchstabe
+    } else if (c >= 'a' && c <= 'z') { // Das eingelesene Zeichen ist ein Kleinbuchstabe
       klein++;
-    else if (c >= '0' && c <= '9') { // Das eingelesene Zeichen ist eine Ziffer
+    } else if (c >= '0' && c <= '9') { // Das eingelesene Zeichen ist eine Ziffer
       ziffern++;
       q = quersumme(c); // Rufe die Funktion "quersumme" auf und speichere den Return-Wert in q
       //q = alternative_quersumme(q, c);
@@ -41,8 +41,9 @@ int main() {
         printf("\nDie Quersumme beträgt %i\n", q);
         break; // Verlasse die While-Schleife
       }
-    } else // Das eingelesene Zeichen ist weder ein Großbuchstabe, noch ein Kleinbuchstabe oder eine Ziffer
+    } else { // Das eingelesene Zeichen ist weder ein Großbuchstabe, noch ein Kleinbuchstabe oder eine Ziffer
       andere++;
+    }
   }
 
   printf("Anzahl gelesener Zeichen: %i\n", gesamt);
